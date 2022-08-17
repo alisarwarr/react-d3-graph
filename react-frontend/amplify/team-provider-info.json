@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactd3graphnodespos-dev-161854-authRole",
+      "UnauthRoleArn": "arn:aws:iam::902276074505:role/amplify-reactd3graphnodespos-dev-161854-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::902276074505:role/amplify-reactd3graphnodespos-dev-161854-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactd3graphnodespos-dev-161854-deployment",
+      "UnauthRoleName": "amplify-reactd3graphnodespos-dev-161854-unauthRole",
+      "StackName": "amplify-reactd3graphnodespos-dev-161854",
+      "StackId": "arn:aws:cloudformation:us-east-1:902276074505:stack/amplify-reactd3graphnodespos-dev-161854/e7a4e650-1254-11ed-aa8a-0e5a10538aad",
+      "AmplifyAppId": "djr9kachvyfns"
+    },
+    "categories": {
+      "auth": {
+        "reactd3graphnodespos9785747a": {},
+        "true": {}
+      }
+    }
+  }
+}

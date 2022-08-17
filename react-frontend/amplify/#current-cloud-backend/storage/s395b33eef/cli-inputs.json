@@ -1,0 +1,17 @@
+{
+  "resourceName": "s395b33eef",
+  "policyUUID": "95b33eef",
+  "bucketName": "reactd3graphnodespos20d2e11e41714f788b542120c4c",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

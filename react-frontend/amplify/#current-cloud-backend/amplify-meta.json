@@ -1,0 +1,92 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactd3graphnodespos-dev-161854-authRole",
+      "UnauthRoleArn": "arn:aws:iam::902276074505:role/amplify-reactd3graphnodespos-dev-161854-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::902276074505:role/amplify-reactd3graphnodespos-dev-161854-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactd3graphnodespos-dev-161854-deployment",
+      "UnauthRoleName": "amplify-reactd3graphnodespos-dev-161854-unauthRole",
+      "StackName": "amplify-reactd3graphnodespos-dev-161854",
+      "StackId": "arn:aws:cloudformation:us-east-1:902276074505:stack/amplify-reactd3graphnodespos-dev-161854/e7a4e650-1254-11ed-aa8a-0e5a10538aad",
+      "AmplifyAppId": "djr9kachvyfns"
+    }
+  },
+  "api": {
+    "marvel-api": {
+      "service": "AppSync",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY"
+          },
+          "additionalAuthenticationProviders": null
+        },
+        "GraphQLAPIIdOutput": "rmyn5vevdbcmvjc6yktdigkigm",
+        "GraphQLAPIEndpointOutput": "https://f6dikfrksbdhvpdqm2j46os46u.appsync-api.us-east-1.amazonaws.com/graphql",
+        "name": "marvel-api",
+        "region": "us-east-1",
+        "GraphQLAPIKeyOutput": "da2-6idf5ay6qzgf3kdcwjeioh7cie"
+      },
+      "lastPushTimeStamp": "2022-08-02T11:19:56.729Z"
+    }
+  },
+  "auth": {
+    "reactd3graphnodespos9785747a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactd3graphnodespos-dev-161854-deployment/amplify-cfn-templates/auth/reactd3graphnodespos9785747a-cloudformation-template.json",
+        "logicalId": "authreactd3graphnodespos9785747a"
+      },
+      "lastPushTimeStamp": "2022-08-04T11:28:32.005Z",
+      "output": {
+        "UserPoolId": "us-east-1_okeVIEn8j",
+        "AppClientIDWeb": "3ntk2u4g51mur95bfaaq36tjq",
+        "AppClientID": "3ck4atn72dvpvk8o6krisjmib6",
+        "IdentityPoolId": "us-east-1:5ac75faa-35d0-4742-bba8-28913011a489",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:902276074505:userpool/us-east-1_okeVIEn8j",
+        "IdentityPoolName": "reactd3graphnodespos9785747a_identitypool_9785747a__dev",
+        "UserPoolName": "reactd3graphnodespos9785747a_userpool_9785747a"
+      },
+      "lastPushDirHash": "p77GEMx1OH1SyHWCHBWn48wa6tQ="
+    }
+  },
+  "storage": {
+    "s395b33eef": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2022-08-04T11:28:32.005Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactd3graphnodespos-dev-161854-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages395b33eef"
+      },
+      "output": {
+        "BucketName": "reactd3graphnodespos20d2e11e41714f788b542120c4c161854-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "+0gCxH5o7aTaENhg9Gjs9uzfuNo="
+    }
+  }
+}

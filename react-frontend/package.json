@@ -1,0 +1,43 @@
+{
+  "name": "react-d3-graph-nodes-position-reset",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.5",
+    "@mui/styles": "^5.8.4",
+    "aws-amplify": "^4.3.26",
+    "d3": "5.5.0",
+    "fs": "^0.0.1-security",
+    "jsonfile": "^6.1.0",
+    "react": "17.0.1",
+    "react-d3-graph": "2.6.0",
+    "react-dom": "17.0.1",
+    "react-scripts": "4.0.0",
+    "react-select": "^5.4.0",
+    "sass": "^1.53.0",
+    "sweetalert2": "^11.4.19"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+projects:
+  marvel-api:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        region: us-east-1
+        apiId: rmyn5vevdbcmvjc6yktdigkigm
+        maxDepth: 5

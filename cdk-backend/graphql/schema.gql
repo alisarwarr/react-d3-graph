@@ -1,0 +1,142 @@
+# LINK
+type linkType {
+    source: String!
+    target: String!
+
+
+    # CASE-1 ( for only Group )
+    # source ----> will be GRAPH's name behaves as root
+    # target ----> will be VERTEX's name behaves as root's direct child
+#####
+    # CASE-2 ( for only Category )
+    # source ----> will be VERTEX's name behaves as root's direct child 
+    # target ----> will be VERTEX's name behaves as root's direct child's child
+}
+input linkInput {
+    source: String!
+    target: String!
+
+
+    # CASE-1 ( for only Group )
+    # source ----> will be GRAPH's name, behaves as root
+    # target ----> will be VERTEX's name, behaves as root's direct child
+#####
+    # CASE-2 ( for only Category )
+    # source ----> will be VERTEX's name, behaves as root's direct child 
+    # target ----> will be VERTEX's name, behaves as root's direct child's child
+}
+
+
+
+# NODE
+type nodeType {
+    id: ID!
+    ##########
+    fontSize: String     # ( for only GRAPH )
+#####
+    size: String         # ( for Group / Category )
+#####
+    symbolType: String   # ( for only Group )
+    color: String        # ( for only Group )
+#####
+    name: String         # ( for GRAPH / Category )
+    svg: String          # ( for GRAPH / Category )
+
+
+    # CASE-1 ( for only GRAPH )
+    # id, fontSize, svg, size ( 'id' as the GROUP's name )
+#####
+    # CASE-2 ( for only Group )
+    # id, symbolType, color, size ( 'id' as the GROUP's name )
+#####
+    # CASE-3 ( for only Category )
+    # id, name, svg, size
+
+
+    connection: String!
+}
+input nodeInput {
+    id: ID!
+    ##########
+    fontSize: Int        # ( for only GRAPH )
+#####
+    size: Int            # ( for Group / Category )
+#####
+    symbolType: String   # ( for only Group )
+    color: String        # ( for only Group )
+#####
+    name: String         # ( for GRAPH / Category )
+    svg: String          # ( for GRAPH / Category )
+
+
+    # CASE-1 ( for only GRAPH )
+    # id, fontSize, svg, size ( 'id' as the GROUP's name )
+#####
+    # CASE-2 ( for only Group )
+    # id, symbolType, color, size ( 'id' as the GROUP's name )
+#####
+    # CASE-3 ( for only Category )
+    # id, name, svg, size
+
+
+    connection: String!
+}
+
+
+
+# GRAPH
+type graphPropsType {
+    link: [linkType!]
+    node: [nodeType!]
+}
+input graphPropsInput {
+    link: [linkInput!]
+    node: [nodeInput!]
+}
+type graphType {
+    id: ID!
+    ##########
+    name: String!
+    data: graphPropsType!
+}
+
+
+
+# QUERY
+type Query {
+    allGraphs: [graphType!]
+    getGraphByID(id: ID!): graphType
+}
+
+
+
+# MUTATION
+type Mutation {
+    createGraph(
+        name: String!
+        data: graphPropsInput!
+    ): graphType
+
+    deleteGraph(
+        id: ID!
+    ): String
+
+    editGraph(
+        id: ID!
+        ##########
+        name: String!
+        data: graphPropsInput!
+    ): graphType
+}
+
+
+
+# SUBSCRIPTION
+type Subscription {
+    onCreateGraph: graphType
+       @aws_subscribe(mutations: ["createGraph"])
+    onDeleteGraph: String
+       @aws_subscribe(mutations: ["deleteGraph"])
+    onEditGraph: graphType
+       @aws_subscribe(mutations: ["editGraph"])
+}
